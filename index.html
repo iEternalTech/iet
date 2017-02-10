@@ -16,15 +16,21 @@
 
     <!-- Theme CSS -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-	alert('asdas');
-	$('.navbar-brand').click(function(){
-		alert('asds');
-		$('.api').load('http://iverthdevserver.com/40count/webservices/classifieddetail.php?id=2702');
-	});
-});
+window.onload = function()
+{
+    document.addEventListener("deviceready", init, false);
+}
+function init()
+{
+    var myButton = document.getElementById("btnClick");
+    myButton.addEventListener("click", clicked, false);
+}
+function clicked()
+{
+    alert("You clicked a button.");
+}
 </script>
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -51,7 +57,7 @@ $(document).ready(function(){
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="javascript:void(0)">Start Bootstrap</a>
+                <a class="navbar-brand" id="btnClick" href="index.html">Start Bootstrap</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
