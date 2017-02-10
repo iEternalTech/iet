@@ -19,8 +19,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-alert('asdas');
-	$('.api').load('http://iverthdevserver.com/40count/webservices/classifieddetail.php?id=2702');
+	alert('asdas');
+	$('.navbar-brand').click(function(){
+		alert('asds');
+		$('.api').load('http://iverthdevserver.com/40count/webservices/classifieddetail.php?id=2702');
+	});
 });
 </script>
     <!-- Custom Fonts -->
@@ -48,7 +51,7 @@ alert('asdas');
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="javascript:void(0)">Start Bootstrap</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
